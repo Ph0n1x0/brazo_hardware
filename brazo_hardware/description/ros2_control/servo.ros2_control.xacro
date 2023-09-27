@@ -3,7 +3,7 @@
   <xacro:macro name="servo_ros2_control" params="name prefix">
     <ros2_control name="${name}" type="system">
       <hardware>
-        <plugin>servo_hardware/ServoArduinoHardware</plugin>
+        <plugin>mock_components/GenericSystem</plugin>
         <param name="joint1_name">servo_joint</param>
         <param name="loop_rate">30</param>
         <param name="device">/home/jammy/servo</param>
