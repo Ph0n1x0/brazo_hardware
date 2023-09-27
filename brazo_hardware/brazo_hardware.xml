@@ -1,4 +1,4 @@
-<library path="servo_hardware">
+<library path="brazo_hardware">
   <class name="servo_hardware/ServoArduinoHardware"
          type="servo_hardware::ServoArduinoHardware"
          base_class_type="hardware_interface::SystemInterface">

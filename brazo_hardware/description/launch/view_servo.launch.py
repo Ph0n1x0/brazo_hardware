@@ -29,7 +29,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_package",
-            default_value="servo_hardware",
+            default_value="brazo_hardware",
             description="Description package with robot URDF/xacro files. Usually the argument \
         is not set, it enables use of a custom description.",
         )
@@ -37,7 +37,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file",
-            default_value="servo.urdf.xacro",
+            default_value="urdf.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )
@@ -57,8 +57,8 @@ def generate_launch_description():
     prefix = LaunchConfiguration("prefix")
 
     # Get URDF via xacro
-    pkg_path = os.path.join(get_package_share_directory('servo_hardware'))
-    xacro_file = os.path.join(pkg_path,'urdf','servo.urdf.xacro')
+    pkg_path = os.path.join(get_package_share_directory('brazo_hardware'))
+    xacro_file = os.path.join(pkg_path,'description','urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_description = {"robot_description": robot_description_config.toxml()}
 
