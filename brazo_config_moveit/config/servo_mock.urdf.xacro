@@ -3,10 +3,10 @@
     
 
     <!-- Import panda urdf file -->
-    <xacro:include filename="$(find servo_hardware)/urdf/servo.description.xacro" />
+    <xacro:include filename="$(find brazo_hardware)/description/description/urdf.xacro" />
 
     <!-- Import servo ros2_control description -->
-    <xacro:include filename="servo.ros2_control.xacro" />
+    <xacro:include filename="brazo.ros2_control.xacro" />
     <xacro:servo_ros2_control 
         name="servo" 
         plugin="mock_components/GenericSystem" 
