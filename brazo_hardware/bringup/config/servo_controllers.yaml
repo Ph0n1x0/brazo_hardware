@@ -12,5 +12,8 @@ controller_manager:
 servo_controller:
   ros__parameters:
     joints:
-     - servo_joint
+      - hombro
+      - codo
+      - articulacion
+      - muneca
     interface_name: position
