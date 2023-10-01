@@ -17,9 +17,9 @@ def generate_launch_description():
     )
 
     moveit_config = (
-        MoveItConfigsBuilder("servo_hardware")
+        MoveItConfigsBuilder("brazo_hardware")
         .robot_description(file_path="config/servo_mock.urdf.xacro")
-        .robot_description_semantic(file_path="config/servo.srdf")
+        .robot_description_semantic(file_path="config/brazo.srdf")
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
@@ -34,7 +34,7 @@ def generate_launch_description():
 
     # RViz
     rviz_base = os.path.join(
-        get_package_share_directory("servo_hardware_moveit_config"), "launch"
+        get_package_share_directory("brazo_config_moveit"), "launch"
     )
     rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
 
@@ -72,7 +72,7 @@ def generate_launch_description():
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("servo_hardware_moveit_config"),
+        get_package_share_directory("brazo_config_moveit"),
         "config",
         "ros2_controllers.yaml",
     )
