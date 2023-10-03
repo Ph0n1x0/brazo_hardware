@@ -57,7 +57,8 @@
             </geometry>
         </collision>
     </link>
-    <joint name="hombro" type="continuous">
+    <joint name="hombro" type="revolute">
+        <limit lower="-${pi/2}" upper="${pi/2}" effort="0.0" velocity="0.0"/>
         <!--<origin xyz="0 0 0.5925" rpy="0 0 0.55607" />-->
         <origin xyz="0 0 0.5925" rpy="0 0 0" />
         <parent link="base_link" />
@@ -88,7 +89,8 @@
             </geometry>
         </collision>
     </link>
-    <joint name="codo" type="continuous">
+    <joint name="codo" type="revolute">
+        <limit lower="-${pi/2}" upper="${pi/2}" effort="0.0" velocity="0.0"/>
         <!--<origin xyz="0.4025 0 0" rpy="0 0 2.4099" /> -->
         <origin xyz="0.4025 0 0" rpy="0 0 0" /> 
         <parent link="antebrazo" />
@@ -150,7 +152,8 @@
             </geometry>
         </collision>
     </link>
-    <joint name="muneca" type="continuous">
+    <joint name="muneca" type="revolute">
+        <limit lower="-${pi}" upper="${pi}" effort="0.0" velocity="0.0"/>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <parent link="mano" />
         <child link="dedo" />

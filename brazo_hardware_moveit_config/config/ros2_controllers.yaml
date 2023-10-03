@@ -13,7 +13,7 @@ controller_manager:
 servo_controller:
   ros__parameters:
     command_interfaces:
-      - position
+      - velocity
     state_interfaces:
       - position
       - velocity

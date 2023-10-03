@@ -34,11 +34,11 @@ def generate_launch_description():
              )
 
     package_path = os.path.join(
-        get_package_share_directory('servo_hardware'))
+        get_package_share_directory('brazo_hardware'))
 
     xacro_file = os.path.join(package_path,
-                              'urdf',
-                              'servo.simulated.xacro')
+                              'description',
+                              'brazo.simulated.xacro')
 
     doc = xacro.parse(open(xacro_file))
     xacro.process_doc(doc)
@@ -53,7 +53,7 @@ def generate_launch_description():
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'servo'],
+                                   '-entity', 'brazo'],
                         output='screen')
 
     load_joint_state_controller = ExecuteProcess(
