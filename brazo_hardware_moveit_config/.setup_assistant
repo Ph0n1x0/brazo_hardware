@@ -1,10 +1,10 @@
 moveit_setup_assistant_config:
   URDF:
-    package: "servo_hardware"
-    relative_path: urdf/servo.description.xacro
+    package: "brazo_hardware"
+    relative_path: description/description/urdf.xacro
     xacro_args: ""
   SRDF:
-    relative_path: config/servo.srdf
+    relative_path: config/brazo.srdf
   CONFIG:
     author_name: author_name
     author_email: ares@davinsony.com
