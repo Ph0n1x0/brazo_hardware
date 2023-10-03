@@ -34,7 +34,7 @@ def generate_launch_description():
 
     # RViz
     rviz_base = os.path.join(
-        get_package_share_directory("brazo_config_moveit"), "launch"
+        get_package_share_directory("brazo_hardware_moveit_config"), "launch"
     )
     rviz_full_config = os.path.join(rviz_base, "moveit.rviz")
 
@@ -72,7 +72,7 @@ def generate_launch_description():
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("brazo_config_moveit"),
+        get_package_share_directory("brazo_hardware_moveit_config"),
         "config",
         "ros2_controllers.yaml",
     )
