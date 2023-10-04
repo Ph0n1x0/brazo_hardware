@@ -54,10 +54,6 @@ install(
   DIRECTORY description/launch description/ros2_control description/meshes description/description
   DESTINATION share/brazo_hardware
 )
-install(
-  DIRECTORY bringup/launch bringup/config
-  DESTINATION share/brazo_hardware
-)
 install(TARGETS brazo_hardware
   EXPORT export_brazo_hardware
   ARCHIVE DESTINATION lib

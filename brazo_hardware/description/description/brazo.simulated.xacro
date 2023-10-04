@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="servo">
 
-    <xacro:include filename="$(find brazo_hardware)/description/description/urdf.xacro" />
-    <xacro:include filename="$(find brazo_hardware)/description/description/servo.gazebo.xacro" />
+    <xacro:include filename="$(find brazo_hardware)/description/urdf.xacro" />
+    <xacro:include filename="$(find brazo_hardware)/description/brazo.gazebo.xacro" />
 
 </robot>

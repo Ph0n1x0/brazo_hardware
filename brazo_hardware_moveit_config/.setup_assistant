@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   URDF:
     package: "brazo_hardware"
-    relative_path: description/description/urdf.xacro
+    relative_path: description/urdf.xacro
     xacro_args: ""
   SRDF:
     relative_path: config/brazo.srdf

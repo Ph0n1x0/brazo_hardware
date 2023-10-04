@@ -14,5 +14,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path = "/mnt/d/Ubuntu/brazo_ws/install/brazo_hardware/share"/>
   </export>
 </package>
