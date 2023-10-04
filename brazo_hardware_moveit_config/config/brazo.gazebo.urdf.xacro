@@ -4,10 +4,10 @@
     <!-- Import panda urdf file -->
     <xacro:include filename="$(find brazo_hardware)/description/urdf.xacro" />
 
-    <!-- Import servo ros2_control description -->
+    <!-- Import brazo ros2_control description -->
     <xacro:include filename="brazo.ros2_control.xacro" />
     <xacro:brazo_ros2_control 
-        name="brazo" 
+        name="GazeboSimSystem" 
         plugin="gazebo_ros2_control/GazeboSystem" 
         prefix="" 
     />

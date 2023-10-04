@@ -93,13 +93,6 @@ def generate_launch_description():
         parameters=[moveit_config.robot_description, ros2_controllers_path],
         output="both",
     )
-    delayed_ros2_control_node = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=spawn_entity,
-            on_exit=[ros2_control_node],
-        )
-    )
-
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -142,7 +135,6 @@ def generate_launch_description():
             rviz_node,
             static_tf,
             run_move_group_node,
-            delayed_ros2_control_node,
             delayed_joint_state_broadcaster_spawner,
             delayed_servo_controller_spawner
         ]

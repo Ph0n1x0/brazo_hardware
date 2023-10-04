@@ -25,7 +25,7 @@
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
         <joint name="hombro">
-            <command_interface name="velocity">
+            <command_interface name="position">
                 <param name="min">-15</param>
                 <param name="max">15</param>
             </command_interface>
@@ -35,7 +35,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="codo">
-            <command_interface name="velocity">
+            <command_interface name="position">
                 <param name="min">-15</param>
                 <param name="max">15</param>
             </command_interface>
@@ -45,7 +45,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="articulacion">
-            <command_interface name="velocity">
+            <command_interface name="position">
                 <param name="min">-15</param>
                 <param name="max">15</param>
             </command_interface>
@@ -55,7 +55,7 @@
             <state_interface name="velocity"/>
         </joint>
         <joint name="muneca">
-            <command_interface name="velocity">
+            <command_interface name="position">
                 <param name="min">-15</param>
                 <param name="max">15</param>
             </command_interface>

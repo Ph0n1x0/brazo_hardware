@@ -24,4 +24,11 @@ servo_controller:
       - muneca
       - articulacion
 
+joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - hombro
+      - codo
+      - muneca
+      - articulacion
 
