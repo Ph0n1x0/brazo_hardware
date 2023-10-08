@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="brazo">
+    
+    <!-- Import brazo urdf file -->
+    <xacro:include filename="$(find brazo)/urdf/gazebo.xacro" />
+    
+</robot>

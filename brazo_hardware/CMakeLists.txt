@@ -19,12 +19,11 @@ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
-
 ## COMPILE
 add_library(
   brazo_hardware
   SHARED
-  hardware/servo_system.cpp
+  hardware/brazo_system.cpp
 )
 target_compile_features(brazo_hardware PUBLIC cxx_std_17)
 target_include_directories(brazo_hardware PUBLIC
@@ -40,19 +39,19 @@ target_link_libraries(brazo_hardware PUBLIC serial)
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
-target_compile_definitions(${PROJECT_NAME} PRIVATE "BRAZO_HARDWARE_BUILDING_DLL")
+target_compile_definitions(${PROJECT_NAME} PRIVATE "brazo_HARDWARE_BUILDING_DLL")
 
 # Export hardware plugins
 pluginlib_export_plugin_description_file(hardware_interface brazo_hardware.xml)
 
 # INSTALL
 install(
-  DIRECTORY hardware/include/
-  DESTINATION include/brazo_hardware
+  DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
 )
 install(
-  DIRECTORY description/launch description/ros2_control description/meshes description/description
-  DESTINATION share/brazo_hardware
+  DIRECTORY hardware/include/
+  DESTINATION include/brazo_hardware
 )
 install(TARGETS brazo_hardware
   EXPORT export_brazo_hardware

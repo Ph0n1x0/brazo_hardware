@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="brazo">
+    
+    <!-- Import brazo urdf file -->
+    <xacro:include filename="$(find brazo)/urdf/urdf.xacro" />
+
+    <!-- Import servo ros2_control description -->
+    <xacro:include filename="$(find brazo_hardware)/config/ros2_control.xacro" />
+    <xacro:hardware_component 
+        name="hardware_component" 
+        plugin="mock_components/GenericSystem" 
+    />
+    
+</robot>

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>brazo_hardware</name>
+  <name>brazo</name>
   <version>2023.10.5</version>
-  <description>This package creates a hardware component using a systema hardware interface-type. It uses position command and velocity and position state interfaces. </description>
+  <description>Demo package of `ros2_control` hardware for DiffBot.</description>
 
   <author     email="lmloaizaz@eafit.edu.co">Luis Miguel Loaiza</author>
   <maintainer email="lmloaizaz@eafit.edu.co">Luis Miguel Loaiza</maintainer>
@@ -12,15 +12,12 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>hardware_interface</depend>
-  <depend>pluginlib</depend>
-  <depend>rclcpp</depend>
-  <depend>rclcpp_lifecycle</depend>
-  <depend>libserial-dev</depend>
+  <depend>rviz2</depend>
+  <depend>robot_state_publisher_gui</depend>
+  <depend>gazebo_ros</depend>
 
-  <test_depend>ament_cmake_gtest</test_depend>
-  
   <export>
     <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path = "${prefix}/.."/>
   </export>
 </package>
